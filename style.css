@@ -1,0 +1,50 @@
+body {
+    --background-color: white;
+    --text-color: black;
+    --accent-color: orangered;
+    --transistion-delay: 1s;
+    --button-text-color: var(var(--background-color));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+
+    transition: var(--transistion-delay);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark{
+    --accent-color:#D0D066;
+    --background-color:#333;
+    --text-color:white;
+}
+
+.theme-toggle-button{
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: .3em;
+    border: none;
+    outline: none;
+
+    transition: var(--transistion-delay);
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus{
+    transform: scale(1.1);
+}
+
+.moon{
+    display: none;
+}
